@@ -27,12 +27,14 @@ import javax.xml.bind.JAXB;
 
 import org.n52.wmsqadapter.config.Config;
 
+import com.sun.jersey.api.view.Viewable;
+
 @Path("/config")
 public class ConfigResource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
-	public Config getMappings(@Context ServletContext context) {
+	public Config getMappingsXml(@Context ServletContext context) {
 		Config config = null;
 		try {
 			// Load config.xml from WEB-INF
@@ -47,4 +49,20 @@ public class ConfigResource {
 		return config;
 	}
 
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public Viewable getMappingsHtml(@Context ServletContext context) {
+		Config config = null;
+		try {
+			// Load config.xml from WEB-INF
+			config = JAXB.unmarshal(
+					context.getResourceAsStream("/WEB-INF/config.xml"),
+					Config.class);
+		} catch (Exception e) {
+			throw new WebApplicationException(Response.serverError()
+					.entity("Error reading configuration file").build());
+		}
+
+		return new Viewable("/mappings", config);
+	}
 }
