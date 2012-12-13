@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AdapterConfiguration>
+	<Mapping id="local">
+		<URL>http://geoviqua.dev.52north.org/ncWMS/wms</URL>
+		<UncertaintyMappings>
+			<!-- Biotemperature -->
+			<UncertaintyMapping layerName="1/mean"
+				uncertaintyKeyword="normal#mean" />
+			<UncertaintyMapping layerName="1/variance"
+				uncertaintyKeyword="normal#variance" />
+		</UncertaintyMappings>
+	</Mapping>
+</AdapterConfiguration>
