@@ -9,20 +9,34 @@
 		<filter-name>jersey</filter-name>
 		<filter-class>com.sun.jersey.spi.container.servlet.ServletContainer</filter-class>
 		<init-param>
-			<description>base path for jersey jsp templates</description>
-			<param-name>com.sun.jersey.config.property.JSPTemplatesBasePath</param-name>
-			<param-value>/templates</param-value>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>org.n52.wmsqadapter.application</param-value>
 		</init-param>
 		<init-param>
+			<description>Base path for jersey jsp templates</description>
+			<param-name>com.sun.jersey.config.property.JSPTemplatesBasePath</param-name>
+			<param-value>/jsp/templates</param-value>
+		</init-param>
+		<init-param>
+			<description>Path for static resources, i.e. paths not affected by Jersey url mapping</description>
 			<param-name>com.sun.jersey.config.property.WebPageContentRegex</param-name>
-			<param-value>/templates/.*</param-value>
+			<param-value>/jsp/.*</param-value>
+		</init-param>
+
+		<init-param>
+			<description>Explicit media type negotiation</description>
+			<param-name>com.sun.jersey.config.property.MediaTypeMappings</param-name>
+			<param-value>xml : application/xml, json : application/json, html: text/html</param-value>
 		</init-param>
 	</filter>
 
-	<!-- for tomcat 6 -->
 	<filter-mapping>
 		<filter-name>jersey</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
+	<welcome-file-list>
+		<welcome-file>jsp/index.jsp</welcome-file>
+	</welcome-file-list>
 
 </web-app>
