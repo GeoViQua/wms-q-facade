@@ -1,4 +1,4 @@
-Copyright 2012 52°North Initiative for Geospatial Open Source Software GmbH
+Copyright 2013 52Â°North Initiative for Geospatial Open Source Software GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -11,3 +11,14 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+This project includes:
+  ASM Core under BSD 3-Clause License
+  Java Servlet API under CDDL + GPLv2 with classpath exception
+  jersey-core under CDDL 1.1 or GPL2 w/ CPE
+  jersey-server under CDDL 1.1 or GPL2 w/ CPE
+  jersey-servlet under CDDL 1.1 or GPL2 w/ CPE
+  jsp-api under CDDL 1.1 or GPL2 w/ CPE
+  jstl under CDDL 1.1 or GPL2 w/ CPE
+  WMS-Q Server Facade under The Apache Software License, Version 2.0
+
