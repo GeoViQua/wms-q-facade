@@ -1,16 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.n52</groupId>
-	<artifactId>wmsq-facade</artifactId>
+	<groupId>org.geoviqua</groupId>
+	<artifactId>wms-q-facade</artifactId>
 	<version>0.1</version>
 	<packaging>war</packaging>
 	
 	<name>WMS-Q Server Facade</name>
-	<description>The WMS-Q Server Facade allows to annotate the capabilities document of 
-	any WMS server with keywords according to the WMS-Q specification, effectively 
-	telling a user/client software which layer contains which information, 
-	for example data values, standard deviation, or variance</description>
+	<description>The WMS-Q Server Facade allows to annotate the capabilities document of any WMS server with keywords according to the WMS-Q specification, effectively telling a user/client software which layer contains which information, for example data values, standard deviation, or variance.</description>
 	
 	<url>https://wiki.52north.org/bin/view/Geostatistics/WMSQServerFacade</url>
 	<inceptionYear>2012</inceptionYear>
